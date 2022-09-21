@@ -1,0 +1,2 @@
+Notice different results with passing in precise floating point numbers analgous to zeroes whereas the conditional statement approach results in 
+z equaling to 1 as the limit states.

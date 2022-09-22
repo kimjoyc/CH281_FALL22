@@ -1,1 +1,1 @@
-Increases though the last nth term experiences overflow.
+It increases until 1e8 experiences overflow where we do not get back a more precise e-value.

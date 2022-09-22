@@ -62,14 +62,10 @@ int main(int argc, char* argv[]) {
 	}
 
 	for (auto x : file_) {
+		cout << "The value is :";
 		x.print_info();
+		cout << "The euler number is: " << x.euler_pro();
         cout << "\n\n";
-        float y= x.euler_pro();
-        cout << setprecision(8);
-        cout << y;
-        cout << "\n\n";
-
-
 	}
 
 	return EXIT_SUCCESS;

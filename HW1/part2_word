@@ -1,1 +1,2 @@
-Messes up the first n times.
+It seems that the recursion of square root function needs to happen more than 2 times because we get a highly inaccurate value, otherwise it seems to get more precise in the x value that is 100.
+This is also true when you get back x. The recursion needs to happen more than twice for increased precision.

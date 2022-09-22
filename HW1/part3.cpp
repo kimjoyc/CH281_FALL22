@@ -14,9 +14,9 @@ using std::vector;
 
 class File_ {
 private:
-	float n;
+	uint32_t n;
 public:
-	File_(float input_n) {
+	File_(uint32_t input_n) {
 		n = input_n;
 	}
 
@@ -24,19 +24,19 @@ public:
 		std::cout << n << std::endl;
 	}
 
-    float euler_lopital(){
-        float num1 = (exp(n)-1)/n;
+    uint32_t euler_lopital(){
+        uint32_t num1 = (exp(n)-1)/n;
         return num1;
     }
 
-    float euler_cond(){
-        float y = exp(n);
+    uint32_t euler_cond(){
+        uint32_t y = exp(n);
         if(y==1){
-            float z = 1;
+            uint32_t z = 1;
             return z;
         }
         else{
-            float z = (y-1)/log(y);
+            uint32_t z = (y-1)/log(y);
             return z;
         }
     }
@@ -77,13 +77,13 @@ int main(int argc, char* argv[]) {
 	}
 
 	for (auto x : file_) {
-        x.print_info();
-        cout << "\n\n";
-        cout<<x.euler_lopital();
-        cout << "\n\n";
+        cout << "The value "; 
+		x.print_info();
+        cout<< "The euler lopital value is : " << x.euler_lopital();
+		cout << "\n";
+        cout<< "The euler condition value is : " << x.euler_cond();
+		cout << "\n\n";
 
-        cout<<x.euler_cond();
-        cout << "\n\n";
 
 
 	}

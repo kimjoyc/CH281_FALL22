@@ -12,7 +12,6 @@ using std::vector;
  
 void bin_conv(int l, int m)
 {
-
     int k;
     for (k = m - 1; k >= 0; k--) {
  
@@ -22,13 +21,12 @@ void bin_conv(int l, int m)
             cout << "0";
     }
 }
- 
+
 typedef union {
-    float f;
+    uint64_t f;
     struct
     {
-
-        unsigned int mantissa : 52;
+        unsigned long int mantissa : 52;
         unsigned int exponent : 11;
         unsigned int sign : 1;
  

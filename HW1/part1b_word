@@ -1,1 +1,1 @@
-Goes to 0.
+It goes to 0 in both cases because 1 divided by a larger value is bound to hit 0, inversely the log of 1 as n goes to 0 is also 0. 

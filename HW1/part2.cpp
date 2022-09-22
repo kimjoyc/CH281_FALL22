@@ -14,9 +14,9 @@ using std::vector;
 
 class File_ {
 private:
-	float n;
+	uint32_t n;
 public:
-	File_(float input_n) {
+	File_(uint32_t input_n) {
 		n = input_n;
 	}
 
@@ -42,8 +42,8 @@ void readfile(vector<File_> &file_, string &filename) {
 	}
 }
 
-float e=1e-8;
-float sqrt_(int n_times,float x){
+uint32_t e=1e-8;
+uint32_t sqrt_(int n_times,uint32_t x){
     if(n_times==0) 
     {
         return 1;
@@ -51,9 +51,9 @@ float sqrt_(int n_times,float x){
     return 0.5*(sqrt_(n_times-1,x) + x/sqrt_(n_times-1,x));
 }
 
-float squared_(float x,int n_times)
+uint32_t squared_(uint32_t x,int n_times)
 {
-    float result_ = sqrt_(n_times, x);
+    uint32_t result_ = sqrt_(n_times, x);
     if (fabs(result_*result_ - x) < e) 
     {
         return result_;
@@ -81,17 +81,19 @@ int main(int argc, char* argv[]) {
 
     vector<int> arr = {2,5,10,20,30,40,50};
 	for (auto x : file_) {
+		cout << "The value n is : ";
         x.print_info();
+		cout << "\n\n";
 
 	}
 
     for (auto it : arr){
-        cout << sqrt_(it,100);
+        cout << "The square root value is : "<< sqrt_(it,100);
         cout << "\n\n";
     }
 
     for (auto it : arr){
-        cout << sqrt_(it,100)*sqrt_(it,100);
+        cout << "The square value x is : "<< sqrt_(it,100)*sqrt_(it,100);
         cout << "\n\n";
     }
 	return EXIT_SUCCESS;

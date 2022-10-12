@@ -54,13 +54,13 @@ void*
 allocator::allocate(uint64_t size)
 {
   const uint64_t offbits = 4095UL;
-  const size_t allocSize = (size*sizeof(header)+sizeof(header)+offbits) & (~offbits);
+  const size_t allocSize = (size*sizeof(size)+sizeof(header)+offbits) & (~offbits);
   header* buffer = (header*) mmap(NULL, allocSize, PROT_READ|PROT_WRITE,
 				  MAP_PRIVATE|MAP_ANONYMOUS , -1 , 0);
   buffer->next = head.next;
   buffer->previous = &head;
   buffer->size = allocSize;
-  head.next = buffer;
+  // head.next = buffer;
   return (char*) buffer+sizeof(header);
 }
 

@@ -26,6 +26,8 @@ std::complex<double> MyCosine::eval(const std::complex<double> r)
 double firstDerivative(Derivable& d, const double r)
 {
   /* implement */
-  return real(d.eval(r+r*1i)/r);
+  const double h = 1.0e-6;
+  const std::complex<double> z=1i;
+  return imag(d.eval(r+z*h))/h;
 
 }

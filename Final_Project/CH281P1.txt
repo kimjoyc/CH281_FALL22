@@ -1,0 +1,43 @@
+Your assignment:
+ Implement the parallel version of the accumulation algorithm.
+ Run the algorithm using only one thread. Check the execution time.
+Compare this time to the time taken by the serial version. Explain the
+dierence
+ Run your code using dierent number of threads. Explain what you
+see
+
+These are the results and seems like 3 threads took the least amount of time.
+
+running on 1 threads took 3130 microsecs
+
+running on 2 threads took 2981 microsecs
+
+running on 3 threads took 2899 microsecs
+
+running on 4 threads took 3218 microsecs
+
+running on 5 threads took 3272 microsecs
+
+running on 6 threads took 3442 microsecs
+
+running on 7 threads took 4025 microsecs
+
+running on 8 threads took 3520 microsecs
+
+ Make sure your code computes the right result regardless of the number
+of threads used.
+It computes the right answer regardless of thread.
+
+After you successfully completed your programming assignment, address the
+following questions
+
+ What is the overhead incurred by parallelization?
+
+
+
+ How does your code scale as you add more threads?
+The difference in time with more threads added seemed to take an increased amount of time to complete.
+
+
+ Is this algorithm compute bound or memory-bandwidth bound?
+It is compute bound due to the usage of parallelization.
